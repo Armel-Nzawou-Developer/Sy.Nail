@@ -1,0 +1,279 @@
+/*  Global styles (RESET, colors, typography, layout)================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+ 
+}
+
+
+:root {
+  --gold-primary: #f2b35b;
+  --gold-deep: #e6a23c;
+  --gold-soft: #f7c97a;
+  --gold-muted: #ebc089;
+  --golden-color:#d4af37;
+
+  --white-pure: #ffffff;
+  --white-warm: #fff9f3;
+  --cream-light: #fdf2e7;
+  --beige-soft: #f5e6d8;
+
+  --nude-light: #f6d6c9;
+  --nude-medium: #eec1af;
+  --nude-warm: #e8b7a1;
+  --peach-soft: #f3c1a7;
+
+  --sparkle-gold: #ffd88a;
+  --sparkle-soft: #fff1d6;
+  --glow-warm: #ffe3b5;
+
+  --text-heading: #d89a3a;
+  --text-body: #7a7a7a;
+  --text-muted: #a8a8a8;
+  --text-light: #cfcfcf;
+
+  --button-primary: #f2b35b;
+  --button-hover: #e6a23c;
+  --button-text: #ffffff;
+  --button-shadow: #f7c97a;
+
+  --border-light: #f1e3d6;
+  --divider-soft: #eadacb;
+}
+
+/* GRID Main container ===================*/
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "navbar navbar"
+    "hero hero"
+    "jumbotron jumbotron"
+    "footer footer";
+}
+
+/* GRID grid-hero ===================*/
+.grid-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5px;
+  min-height: 70vh;
+
+  box-shadow: 1px 0px 2px var(--text-body);
+
+  background-image: url(../assets/images/hero-image.PNG);
+  background-size: cover; /* Ensures the image covers the element */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-attachment: fixed; /* Resize with the view port */
+}
+
+.hero-item {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.hero-item h1 {
+  font-size: 45px;
+  font-weight: 500;
+  margin-bottom: 35px;
+  color: var(--button-primary);
+  animation: fadeIn 3s ease-in-out;
+}
+.hero-item p {
+  margin-bottom: 35px;
+  color: var(--text-body);
+  font-weight: 600;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-item button {
+  margin-top: -8px;
+  padding: 15px 15px;
+  border-radius: 10px;
+
+  font-weight: 700;
+  background-color: var(--button-primary);
+  color: var(--button-text);
+  border-style: none;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+}
+.hero-item button:hover {
+  box-shadow: 3px 0px 6px var(--text-body);
+  transform: scale(1.1);
+}
+#menu__toggle {
+  position: absolute;
+  left: -9999px; /* moves horizontal navbar off-screen */
+}
+
+/* FLEXBOX  - jumbotron ===================*/
+
+.jumbotron {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 30px;
+  gap: 35px;
+  background-color: var(--white-warm);
+}
+.title h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: var(--button-primary);
+}
+.jumbotron-item img {
+  height: 250px;
+  width: 400px;
+  border-radius: 10px;
+}
+.jumbotron-item > h3 {
+  color: var(--text-body);
+  margin-bottom: 15px;
+}
+.jumbotron-item > p {
+  color: var(--text-body);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* KEYFRAMES ========================*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-text {
+  /* animation */
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+}
+
+@keyframes reveal {
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+/* MEDIA QUERY ===================*/
+
+@media (max-width: 970px) {
+  .inner-nav-item {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .inner-nav {
+    visibility: visible;
+    left: 0;
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    margin-top: 85px;
+    cursor: pointer;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--button-primary);
+    transition-duration: 0.25s;
+  }
+
+  .menu__btn > span::before {
+    content: "";
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: "";
+    top: 8px;
+  }
+  #menu__toggle {
+    opacity: 0;
+  }
+  .inner-nav {
+    flex-direction: column;
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 225px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    background-color: rgb(23, 22, 22);
+    opacity: 0.9;
+    box-shadow: 1px 0px 6px var(--button-primary);
+    transition-duration: 0.55s;
+    z-index: 1;
+  }
+  .grid-hero {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .jumbotron {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .jumbotron-item {
+    flex: 25%;
+  }
+  .jumbotron-item img {
+    width: 100%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 5px;
+  }
+}

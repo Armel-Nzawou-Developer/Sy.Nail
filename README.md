@@ -1,2 +1,0 @@
-# Sy.Nail
-Sy.Nail

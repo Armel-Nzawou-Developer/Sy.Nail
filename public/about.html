@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sy.Nail | À propos de Sy.Nail</title>
+    
+    <link rel="shortcut icon" href="../favicon/favicon.ico.PNG" type="image/x-icon">
+     <!-- Global styles (RESET, colors, typography, layout) -->
+    <link rel="stylesheet" href="../css/main.css" />
+   
+    <!-- Shared components for (header, nav, buttons and footer) -->
+    <link rel="stylesheet" href="../css/components.css" />
+     
+   
+    <style>
+     .grid-container {
+     display: grid;
+     grid-template-areas:
+    "header header"
+    "navbar navbar"
+    "about about"
+    "footer footer";
+  
+
+}
+
+/* GRID grid-hero ===================*/
+.grid-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 5px;
+  margin: 25px 25px;
+  min-height: 70vh;
+
+}
+
+.about-item {
+  margin: 15px 15px;
+}
+.about-item > h1{
+ 
+  margin-bottom: 15px;
+  font-weight: 500;
+  color:  var(--button-primary);
+  animation: fadeIn 2s ease-in-out;
+}
+.about-item > p{
+ 
+  margin-bottom: 15px;  
+  font-weight: 600;
+  color: var(--text-body);
+  text-align: justify;
+  animation: fadeIn 1s ease-in-out;
+}
+.about-item img{
+  height: 300px;
+   border-radius: 20px;
+   animation: fadeIn 2s ease-in-out;
+}
+
+
+/* KEYFRAMES ========================*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* MEDIA QUERY ===================*/
+
+@media (max-width: 970px) {
+
+  .grid-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+   margin-bottom: 100px;
+
+}
+  .grid-about img{
+     width: 100%;
+
+}
+
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <!-- Section - Top Header -->
+      <section class="grid-item header" style="grid-area: header">
+        <div class="outter-header">
+         <img src="../assets/icons/phone-footer-icon.PNG" alt="phone-footer-icon">
+         <p>+241 07 45 08 77</p>
+        </div>
+        <div class="inner-header">
+          <div class="inner-header-item">
+            <img src="../assets/icons/location-top-icon.PNG" alt="location-top-icon" >
+            <p>Port-gentil, Gabon</p>
+          </div>
+          <div class="inner-header-item">
+            <img src="../assets/icons/email-top-icon.PNG" alt="email-top-icon" >
+            <p> Info@sy.nail.ga</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section - navbar -->
+      <section class="grid-item navbar" style="grid-area: navbar">
+        <div class="outter-nav ">
+          <a href="../index.html"><img src="../assets/images/logo-navbar.PNG" alt="logo-navbar"> </a>
+        </div>
+
+        <!-- hamburger navigation -->
+        <div class="hamburger">
+           <input id="menu__toggle" type="checkbox" />
+           <label class="menu__btn" for="menu__toggle">
+             <span></span>
+           </label>
+        <div class="inner-nav">
+
+          <div class="inner-nav-item  logo">
+            <img src="../assets/images/logo-navbar-2.PNG" alt="logo-navbar">
+          </div>
+          <div class="inner-nav-item  ">
+            <li><a href="../index.html" >Accueil</a></li>
+          </div>
+          <div class="inner-nav-item active-page">
+            <li><a href="./about.html" >À propos</a></li>
+          </div>
+          <div class="inner-nav-item">
+            <li><a href="./services.html" >Services</a></li>
+          </div>
+          <div class="inner-nav-item">  
+            <li><a href="./gallery.html" >Galerie</a></li>
+          </div>
+          <!-- <div class="inner-nav-item">  
+            <li><a href="./public/pricing.html" >Nos tarifs</a></li>
+          </div> -->
+          <div class="inner-nav-item">
+            <li><a href="./contact.html" >Contact</a></li>
+          </div> 
+          <div class="inner-nav-item">
+            <a target="_blank" href="https://wa.me/+24107450877"  ><button class="button-flex"><img src="../assets/icons/whatsApp-top-icon.PNG" alt="" srcset="">Chatter sur WhatsApp</button></a>
+          </div> 
+        </div>
+      </div>
+      </section>
+
+      <!-- Section - about -->
+      <section class="grid-item grid-about" style="grid-area: about">
+        <div class="about-item">
+          <h1>À propos de Sy.Nail – Salon de manucure à Port-Gentil</h1>
+          <p><em style="color:#e6a23c;"> Sy.Nail</em> est un salon de beauté spécialisé dans la <em style="color:#e6a23c;">manucure, la pédicure et les soins des ongles à Port-Gentil. </em>  Nous accompagnons nos clientes avec des prestations professionnelles, modernes et adaptées à chaque style, du plus naturel au plus sophistiqué.</p>
+          <p>Notre priorité est d’offrir un <em style="color:#e6a23c;">service de qualité </em>, en utilisant des <em style="color:#e6a23c;"> produits fiables et durables</em> , tout en respectant des normes d’hygiène strictes. Chaque soin est réalisé avec précision afin de sublimer vos mains et vos pieds tout en garantissant confort et bien-être.</p>
+          <p>Pour plus de flexibilité, <em style="color:#e6a23c;"> Sy.Nail propose également des soins à domicile</em> , permettant à nos clientes de profiter d’un moment de détente directement chez elles, sans compromis sur la qualité du service.</p>
+          <p>✨ Faites confiance à <em style="color:#e6a23c;"> Sy.Nail</em>, votre référence en <em style="color:#e6a23c;">soins des ongles, manucure et pédicure à Port-Gentil </em> , pour une beauté élégante et soignée au quotidien.</p>
+        </div>
+        <div class="about-item">
+          <img src="../assets/images/about-image.PNG" alt="about-image">
+        </div>
+      </section>
+
+
+      <!-- Section - footer -->
+      <section class="grid-item footer" style="grid-area: footer">
+        <div class="footer-list">
+            <ul class="footer-list-item">
+              <li><a class="logo-navbar" href="../index.html"> <img src="../assets/images/logo-navbar.PNG" alt="logo-navbar"></a></li>
+              <li><p><span style="color: #cf905c;">© 2025 Sy.Nail</span> </p></li>
+              <li><p><span style="color: #cf905c;">Tous droits réservés.</span> </p></li>
+              <li>
+                <a target="_blank" href="https://armel-nzawou-developer.github.io/ArmelDesign/" ><span >Design by ArmelDesign★</span></a>
+              </li>
+            </ul>
+          </div>
+        <div class="footer-list">
+            <ul class="footer-list-item">
+              <li><h2>Menu</h2></li>
+              <li><a href="../index.html"> Accueil</a></li>
+              <li><a href="./about.html"> À propos</a></li>
+              <li><a href="./services.html"> Services</a></li>
+              <li><a href="./gallery.html"> Galerie</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-list">
+            <ul class="footer-list-item">
+              <li><h2>Liens Rapides</h2></li>
+              <li><a href="./reservation.html">Reserver soins à domicile</a></li>
+              <li><a href="../conditions-generales/Sy.Nail - Conditions generales de service.pdf"> Conditions générales</a></li>
+            </ul>
+          </div>
+        <div class="footer-list">
+          <ul class="footer-list-item">
+            <li><h2> Restez Connectés</h2></li>
+            <li class="footer-icons"><img src="../assets/icons/phone-footer-icon.PNG" alt="phone-footer-icon"/><a href="tel:+241 07 45 08 77 "><p>+241 07 45 08 77 </p></a></li>
+            <li class="footer-icons"><img src="../assets/icons/email-footer-icon.PNG" alt="email-footer-icon"/><a href="mailto:info@carrental.com"><p>synails064@gmail.com</p></a></li>
+            <li class="footer-icons"><img src="../assets/icons/calendar-icon.PNG" alt="calendar-icon"/> <p>Lun - Dim, 	Ouvert 24h/24 et 7j/7</p></li>
+            <li class="footer-icons">
+              <a target="_blank" href="https://www.facebook.com/"><img src="../assets/icons/facebook-footer-icon.png" alt="facebook-footer-icon"/></a>
+              <a target="_blank" href="https://www.instagram.com/"><img src="../assets/icons/instagram-footer-icon.png" alt="instagram-footer-icon"/></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
