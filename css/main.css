@@ -1,0 +1,45 @@
+/*  Global styles (RESET, colors, typography, layout)================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --gold-primary: #f2b35b;
+  --gold-deep: #e6a23c;
+  --gold-soft: #f7c97a;
+  --gold-muted: #ebc089;
+  --golden-color: #d4af37;
+
+  --white-pure: #ffffff;
+  --white-warm: #fff9f3;
+  --cream-light: #fdf2e7;
+  --beige-soft: #f5e6d8;
+
+  --nude-light: #f6d6c9;
+  --nude-medium: #eec1af;
+  --nude-warm: #e8b7a1;
+  --peach-soft: #f3c1a7;
+
+  --sparkle-gold: #ffd88a;
+  --sparkle-soft: #fff1d6;
+  --glow-warm: #ffe3b5;
+
+  --text-heading: #d89a3a;
+  --text-body: #7a7a7a;
+  --text-muted: #a8a8a8;
+  --text-light: #cfcfcf;
+
+  --button-primary: #f2b35b;
+  --button-hover: #e6a23c;
+  --button-text: #ffffff;
+  --button-shadow: #f7c97a;
+
+  --border-light: #f1e3d6;
+  --divider-soft: #eadacb;
+}
